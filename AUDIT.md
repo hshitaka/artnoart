@@ -51,7 +51,7 @@ Direction visuelle atelier / console (fond charbon, signal cyan, méta en mono).
 
 Commande : `python3 tests/test_downloads.py`
 
-Résultat : **7/7 OK**.
+Résultat : **9/9 OK** après correctif lecture.
 
 Couverture :
 
@@ -62,9 +62,13 @@ Couverture :
 5. Les WAV commencent par `RIFF` / `WAVE`.
 6. Une URL inconnue répond 404.
 
-## Limites restantes
+## Correctif lecture (après QA navigateur)
 
-- Les WAV sont des tons générés (preuve de route, pas des masters).
+Les téléchargements Direct et Fetch étaient bons. La lecture échouait visuellement parce que les extraits duraient ~1 s : l’événement `ended` vidait `audio.src`, ce qui déclenchait un faux `error` (« Lecture impossible »). L’état cyan disparaissait tout de suite.
+
+Correctifs : extraits à 5 s, arrêt sans vider `src`, bordure cyan nette, logo cliquable, focus plus visible.
+
+- Les extraits WAV durent 5 secondes (jingles techniques, pas des masters).
 - Pas de backend : pas de compteur de téléchargements ni d’auth.
 - Les polices Google Fonts nécessitent le réseau au premier chargement.
 - Le mixeur à droite de la section Mix est décoratif.

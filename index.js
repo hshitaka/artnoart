@@ -127,18 +127,26 @@
   sections.forEach((section) => observer.observe(section));
 
   function stopPlayback() {
-    if (activeAudio) {
-      activeAudio.pause();
-      activeAudio.src = "";
+    const audio = activeAudio;
+    const track = activeTrack;
+    activeAudio = null;
+    activeTrack = null;
+    if (audio) {
+      audio.onerror = null;
+      audio.onended = null;
+      audio.pause();
+      try {
+        audio.currentTime = 0;
+      } catch {
+        /* ignore unseekable buffers */
+      }
     }
-    activeTrack?.classList.remove("is-playing");
-    const playingButton = activeTrack?.querySelector(".play");
+    track?.classList.remove("is-playing");
+    const playingButton = track?.querySelector(".play");
     if (playingButton) {
       const label = playingButton.getAttribute("aria-label") || "";
       playingButton.setAttribute("aria-label", label.replace(/^Pause/, "Lire"));
     }
-    activeAudio = null;
-    activeTrack = null;
   }
 
   document.querySelectorAll(".track .play").forEach((button) => {
@@ -153,22 +161,34 @@
       }
 
       stopPlayback();
-      const audio = new Audio(src);
+      const audio = new Audio();
+      const url = new URL(src, document.baseURI).href;
       audio.preload = "auto";
+      audio.src = url;
       activeAudio = audio;
       activeTrack = track;
       track.classList.add("is-playing");
       button.setAttribute("aria-label", (button.getAttribute("aria-label") || "Lire").replace(/^Lire/, "Pause"));
-      audio.addEventListener("ended", stopPlayback, { once: true });
+      audio.addEventListener("ended", () => {
+        if (activeAudio === audio) stopPlayback();
+      }, { once: true });
       audio.addEventListener("error", () => {
+        if (activeAudio !== audio) return;
         stopPlayback();
         announce("Lecture impossible pour cet extrait.", true);
       }, { once: true });
       try {
         await audio.play();
-      } catch {
+      } catch (error) {
+        if (activeAudio !== audio) return;
         stopPlayback();
-        announce("Le navigateur a bloqué la lecture automatique.", true);
+        const blocked = error instanceof DOMException && error.name === "NotAllowedError";
+        announce(
+          blocked
+            ? "Le navigateur a bloqué la lecture. Réessayez en cliquant lecture."
+            : "Lecture impossible pour cet extrait.",
+          true
+        );
       }
     });
   });

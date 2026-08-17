@@ -122,6 +122,21 @@ class DownloadRoutesTests(unittest.TestCase):
             self.assertEqual(status, 200, relative)
             self.assertGreater(len(body), 200, relative)
 
+    def test_wav_duration_is_long_enough_to_hear(self) -> None:
+        import wave
+
+        for item in self.catalog["files"]:
+            if not item["path"].endswith(".wav"):
+                continue
+            with wave.open(str(ROOT / item["path"]), "r") as handle:
+                seconds = handle.getnframes() / float(handle.getframerate())
+            self.assertGreaterEqual(seconds, 4.5, item["id"])
+
+    def test_player_does_not_blank_audio_src_on_stop(self) -> None:
+        source = (ROOT / "index.js").read_text(encoding="utf-8")
+        self.assertNotIn('audio.src = ""', source)
+        self.assertNotIn("activeAudio.src = \"\"", source)
+
     def test_missing_file_is_404(self) -> None:
         status, _, _ = self.fetch("assets/downloads/prod/does-not-exist.wav")
         self.assertEqual(status, 404)

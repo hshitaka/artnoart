@@ -15,7 +15,7 @@
       "format": "WAV",
       "bpm": 108,
       "key": "Fm",
-      "bytes": 39734
+      "bytes": 220544
     },
     {
       "id": "pulse-room",
@@ -26,7 +26,7 @@
       "format": "WAV",
       "bpm": 96,
       "key": "Dm",
-      "bytes": 44144
+      "bytes": 220544
     },
     {
       "id": "live-set-excerpt",
@@ -37,7 +37,7 @@
       "format": "WAV",
       "bpm": 122,
       "key": "Em",
-      "bytes": 48554
+      "bytes": 220544
     },
     {
       "id": "stem-bus",
@@ -48,7 +48,7 @@
       "format": "WAV",
       "bpm": 118,
       "key": "A",
-      "bytes": 37528
+      "bytes": 220544
     },
     {
       "id": "press-kit",
