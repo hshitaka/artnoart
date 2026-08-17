@@ -1,0 +1,17 @@
+ARTNOART — dossier presse
+Arnaud Bannais
+Production · Mix · Outils live
+
+Profil
+Arnaud Bannais conçoit des outils et des pièces sonores pour le spectacle vivant.
+Il a notamment développé le Bionic Looper (Bionic Orchestra 2.0, Cie Organic Orchestra)
+et anime des ateliers autour d’Ableton Live, Push et MaxMSP.
+
+Contact
+a.bannais@gmail.com
+https://github.com/hshitaka/artnoart
+
+Fichiers démo
+Les extraits WAV du site sont des jingles techniques destinés à valider
+les voies de téléchargement (lien direct et fetch/blob). Ils ne constituent
+pas un catalogue discographique.

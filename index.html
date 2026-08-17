@@ -1,64 +1,168 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport"   content="widt=device-with, initial-scale=1.0">
-        <title>Document</title>
-</head>
-<body>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ARTNOART — Arnaud Bannais. Production, mix et outils pour le spectacle vivant. Téléchargement des extraits et du dossier presse.">
+    <meta name="theme-color" content="#0a0b0c">
+    <meta name="color-scheme" content="dark">
+    <title>ARTNOART — Arnaud Bannais</title>
+    <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Manrope:wght@400;500;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#contenu">Aller au contenu</a>
 
-<header>
+    <header class="site-header">
+      <div class="brand">
+        <a class="wordmark" href="#home" aria-label="ARTNOART, retour à l’accueil">
+          ART<span class="wordmark-no">NO</span>ART
+        </a>
+        <p class="brand-sub">Arnaud Bannais</p>
+      </div>
 
-<h1>
-    Arnaud Bannais
-</h1>
-<nav>
-    <ul>
-        <li><a href="#">HOME</a></li>
-        <li><a href="#">PROD</a></li>
-        <li><a href="#">MIX</a></li>
-    </ul>
-</nav>
-</header>
+      <button
+        class="nav-toggle"
+        type="button"
+        aria-controls="site-nav"
+        aria-expanded="false"
+        aria-label="Ouvrir le menu"
+      >
+        <span aria-hidden="true"></span><span aria-hidden="true"></span>
+      </button>
 
+      <nav id="site-nav" class="site-nav" aria-label="Sections">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#prod">Prod</a></li>
+          <li><a href="#mix">Mix</a></li>
+        </ul>
+      </nav>
+    </header>
 
-<h2>
+    <main id="contenu">
+      <section id="home" class="panel hero" aria-labelledby="hero-title">
+        <p class="kicker">Studio · code · scène</p>
+        <h1 id="hero-title">Production et mix, outils temps réel.</h1>
+        <p class="lede">
+          ARTNOART est l’atelier d’Arnaud Bannais&nbsp;: pièces sonores, mixage,
+          et logiciels pour le spectacle vivant. Extraire, écouter, télécharger.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#prod">Écouter les prod</a>
+          <a class="btn btn-ghost" href="assets/downloads/press/artnoart-press-kit.txt" download="artnoart-press-kit.txt" data-dwet-mode="direct" data-filename="artnoart-press-kit.txt" aria-label="Télécharger le dossier presse (voie directe)">
+            Dossier presse
+          </a>
+        </div>
+        <dl class="stats" aria-label="Repères">
+          <div>
+            <dt>Voies de téléchargement</dt>
+            <dd>Direct + Fetch</dd>
+          </div>
+          <div>
+            <dt>Formats démo</dt>
+            <dd>WAV · TXT</dd>
+          </div>
+          <div>
+            <dt>Outils</dt>
+            <dd>Ableton · MaxMSP</dd>
+          </div>
+        </dl>
+      </section>
 
-  changement
+      <section id="prod" class="panel" aria-labelledby="prod-title">
+        <header class="panel-head">
+          <h2 id="prod-title">Prod</h2>
+          <p>Extraits techniques pour valider l’écoute et le téléchargement. Ce ne sont pas des masters commerciaux.</p>
+        </header>
+        <ul class="track-list">
+          <li class="track" data-src="assets/downloads/prod/night-circuit.wav" data-filename="night-circuit.wav">
+            <button class="play" type="button" aria-label="Lire Night Circuit">
+              <span aria-hidden="true"></span>
+            </button>
+            <div class="track-meta">
+              <h3>Night Circuit</h3>
+              <p><span>108 BPM</span><span>Fm</span><span>WAV</span><span>39 Ko</span></p>
+            </div>
+            <div class="track-actions">
+              <a class="btn btn-tiny" href="assets/downloads/prod/night-circuit.wav" download="night-circuit.wav" data-dwet-mode="direct" data-filename="night-circuit.wav" aria-label="Télécharger Night Circuit, voie directe">Direct</a>
+              <button class="btn btn-tiny btn-alt" type="button" data-dwet-mode="fetch" data-src="assets/downloads/prod/night-circuit.wav" data-filename="night-circuit.wav" aria-label="Télécharger Night Circuit, voie fetch">Fetch</button>
+            </div>
+          </li>
+          <li class="track" data-src="assets/downloads/prod/pulse-room.wav" data-filename="pulse-room.wav">
+            <button class="play" type="button" aria-label="Lire Pulse Room">
+              <span aria-hidden="true"></span>
+            </button>
+            <div class="track-meta">
+              <h3>Pulse Room</h3>
+              <p><span>96 BPM</span><span>Dm</span><span>WAV</span><span>43 Ko</span></p>
+            </div>
+            <div class="track-actions">
+              <a class="btn btn-tiny" href="assets/downloads/prod/pulse-room.wav" download="pulse-room.wav" data-dwet-mode="direct" data-filename="pulse-room.wav" aria-label="Télécharger Pulse Room, voie directe">Direct</a>
+              <button class="btn btn-tiny btn-alt" type="button" data-dwet-mode="fetch" data-src="assets/downloads/prod/pulse-room.wav" data-filename="pulse-room.wav" aria-label="Télécharger Pulse Room, voie fetch">Fetch</button>
+            </div>
+          </li>
+        </ul>
+      </section>
 
-</h2>
-<p> 
-    texte
-</p>
+      <section id="mix" class="panel" aria-labelledby="mix-title">
+        <header class="panel-head">
+          <h2 id="mix-title">Mix</h2>
+          <p>Bus et extraits de set. Deux voies&nbsp;: lien fichier, ou copie via le navigateur.</p>
+        </header>
+        <div class="mix-layout">
+          <ul class="track-list">
+            <li class="track" data-src="assets/downloads/mix/live-set-excerpt.wav" data-filename="live-set-excerpt.wav">
+              <button class="play" type="button" aria-label="Lire Live Set Excerpt">
+                <span aria-hidden="true"></span>
+              </button>
+              <div class="track-meta">
+                <h3>Live Set Excerpt</h3>
+                <p><span>122 BPM</span><span>Em</span><span>WAV</span><span>47 Ko</span></p>
+              </div>
+              <div class="track-actions">
+                <a class="btn btn-tiny" href="assets/downloads/mix/live-set-excerpt.wav" download="live-set-excerpt.wav" data-dwet-mode="direct" data-filename="live-set-excerpt.wav" aria-label="Télécharger Live Set Excerpt, voie directe">Direct</a>
+                <button class="btn btn-tiny btn-alt" type="button" data-dwet-mode="fetch" data-src="assets/downloads/mix/live-set-excerpt.wav" data-filename="live-set-excerpt.wav" aria-label="Télécharger Live Set Excerpt, voie fetch">Fetch</button>
+              </div>
+            </li>
+            <li class="track" data-src="assets/downloads/mix/stem-bus.wav" data-filename="stem-bus.wav">
+              <button class="play" type="button" aria-label="Lire Stem Bus">
+                <span aria-hidden="true"></span>
+              </button>
+              <div class="track-meta">
+                <h3>Stem Bus</h3>
+                <p><span>118 BPM</span><span>A</span><span>WAV</span><span>37 Ko</span></p>
+              </div>
+              <div class="track-actions">
+                <a class="btn btn-tiny" href="assets/downloads/mix/stem-bus.wav" download="stem-bus.wav" data-dwet-mode="direct" data-filename="stem-bus.wav" aria-label="Télécharger Stem Bus, voie directe">Direct</a>
+                <button class="btn btn-tiny btn-alt" type="button" data-dwet-mode="fetch" data-src="assets/downloads/mix/stem-bus.wav" data-filename="stem-bus.wav" aria-label="Télécharger Stem Bus, voie fetch">Fetch</button>
+              </div>
+            </li>
+          </ul>
+          <aside class="console" aria-hidden="true">
+            <div class="strip"><span>IN</span><i></i><i></i><i></i></div>
+            <div class="strip"><span>BUS</span><i></i><i></i><i></i></div>
+            <div class="strip"><span>FX</span><i></i><i></i><i></i></div>
+            <div class="strip"><span>LR</span><i></i><i></i><i></i></div>
+          </aside>
+        </div>
+      </section>
+    </main>
 
-<style>
-    body {
-        background-color: aqua
-    }
+    <div class="status" role="status" aria-live="polite" id="dwet-status"></div>
 
-    header {
-        background-color: beige;
-    }
-    nav ul {
-        list-style: none;
-        padding: 30px;
-        gap:20px;
-        display:flex ;
-        flex-direction: row; 
-    }
+    <footer class="site-footer">
+      <p>ARTNOART · Arnaud Bannais</p>
+      <p>
+        <a href="mailto:a.bannais@gmail.com">Contact</a>
+        ·
+        <a href="assets/downloads/catalog.json">Catalogue</a>
+      </p>
+    </footer>
 
-
-    h1 {
-        color: red;
-        font-family: fantasy;
-    }
-     h2 {
-        color: #037210;
-    }
-</style>
-<script src="script.js"></script>
-
-</body>
+    <script src="index.js" defer></script>
+  </body>
 </html>
-
-

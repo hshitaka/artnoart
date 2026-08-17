@@ -1,0 +1,63 @@
+{
+  "version": 1,
+  "site": "ARTNOART",
+  "routes": {
+    "direct": "ancre HTML + attribut download",
+    "fetch": "fetch() + Blob + Object URL"
+  },
+  "files": [
+    {
+      "id": "night-circuit",
+      "section": "prod",
+      "title": "Night Circuit",
+      "filename": "night-circuit.wav",
+      "path": "assets/downloads/prod/night-circuit.wav",
+      "format": "WAV",
+      "bpm": 108,
+      "key": "Fm",
+      "bytes": 39734
+    },
+    {
+      "id": "pulse-room",
+      "section": "prod",
+      "title": "Pulse Room",
+      "filename": "pulse-room.wav",
+      "path": "assets/downloads/prod/pulse-room.wav",
+      "format": "WAV",
+      "bpm": 96,
+      "key": "Dm",
+      "bytes": 44144
+    },
+    {
+      "id": "live-set-excerpt",
+      "section": "mix",
+      "title": "Live Set Excerpt",
+      "filename": "live-set-excerpt.wav",
+      "path": "assets/downloads/mix/live-set-excerpt.wav",
+      "format": "WAV",
+      "bpm": 122,
+      "key": "Em",
+      "bytes": 48554
+    },
+    {
+      "id": "stem-bus",
+      "section": "mix",
+      "title": "Stem Bus",
+      "filename": "stem-bus.wav",
+      "path": "assets/downloads/mix/stem-bus.wav",
+      "format": "WAV",
+      "bpm": 118,
+      "key": "A",
+      "bytes": 37528
+    },
+    {
+      "id": "press-kit",
+      "section": "press",
+      "title": "Dossier presse",
+      "filename": "artnoart-press-kit.txt",
+      "path": "assets/downloads/press/artnoart-press-kit.txt",
+      "format": "TXT",
+      "bytes": 588
+    }
+  ]
+}
