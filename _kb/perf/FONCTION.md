@@ -19,6 +19,6 @@ Un set DJ *utilise* kb-perf. Un service culinaire *utilise* kb-perf. Même KB, d
 
 ## Test (partie musicale)
 
-Quand le geste est un set, une voix live, une session Ableton tenue en public : ouvrir kb-perf pour l’état.
+Quand le geste est un set, un mashup live, une voix live, une scène, une session Ableton tenue en public : ouvrir kb-perf pour l’état.
 
 Quand le geste est ranger un sample, nommer un stem, choisir un fichier djay : ne pas ouvrir kb-perf. Ça reste dans le KB métier.
