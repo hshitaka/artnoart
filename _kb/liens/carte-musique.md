@@ -9,37 +9,51 @@ Perf : [_kb/perf/FONCTION.md](../perf/FONCTION.md).
 
 | Nœud | Rôle | Pas ça |
 | --- | --- | --- |
-| DJ | Pratique, canon, sets | Pas l’état de flow |
+| kb-dj | Pratique, canon, sets | Pas l’état de flow |
 | djay | Outil de mix DJ | Pas Ableton |
+| mashup | Geste qui croise live et studio | Pas un outil, pas un hub |
+| Prod | Pièces, sessions, extraits | Pas le mix d’écoute |
 | Ableton | Session, clips, Push, pièce | Pas djay |
 | Voix | Prise, présence, traitement | Pas « la perf » |
-| Prod | Pièces, sessions, extraits | Pas le mix d’écoute |
 | Mix | Bus, balance, extraits de set | Pas la prod |
 
 kb-perf n’est **pas** un nœud musical. Il s’attache à un geste, quel que soit le domaine.
 
-## Liens tenus
+## Losange mashup (tenu)
 
-Uniquement ce qui a déjà servi (site ARTNOART, dossier presse, pratique nommée ici).
+Un seul geste, déjà nommé : le mashup. Quatre coins. Le mashup est le croisement, pas un cinquième hub.
+
+```
+        kb-dj                 prod
+           \                 /
+            \               /
+              mashup
+            /               \
+           /                 \
+        djay               Ableton
+```
+
+- **kb-dj** — les sources, le canon qui entre dans le mashup
+- **djay** — le mashup joué / trouvé en live
+- **Ableton** — le mashup construit / figé en session
+- **prod** — le mashup devenu pièce
+
+Ce n’est pas « djay pourrait parler à Ableton ». C’est **le même mashup** qui a déjà servi des deux côtés.
+
+Les côtés du losange ne s’écrivent pas à part. Ils tiennent **parce que** le mashup les a déjà tenus.
+
+## Autres liens tenus
+
+Gestes distincts du losange.
 
 ### Prod → Mix
 
 - **Geste :** même atelier ARTNOART : extraits prod et extraits mix publiés ensemble.
 - **Statut :** tenu
 
-### Mix → DJ
+### Mix → kb-dj
 
 - **Geste :** un extrait du site s’appelle *Live Set Excerpt* — le mix pointe déjà vers le set.
-- **Statut :** tenu
-
-### DJ → djay
-
-- **Geste :** pratique courante nommée pour cette carte : le geste DJ passe par djay.
-- **Statut :** tenu
-
-### Ableton → Prod
-
-- **Geste :** ARTNOART déclare Ableton comme outil de l’atelier (pièces et outils live).
 - **Statut :** tenu
 
 ### Ableton → pédagogie
@@ -64,6 +78,11 @@ Ces lignes ne rangent pas la perf dans la musique. Elles disent : **ce geste-là
 - **Statut :** tenu
 - **Contre-exemple :** une perf culinaire invoquerait le **même** kb-perf, avec une autre matière. Pas un kb-perf-musique.
 
+### Mashup live → kb-perf
+
+- **Geste :** un mashup joué (djay) est un flow, pas seulement un fichier.
+- **Statut :** tenu pour le live ; un mashup seulement assemblé en prod **n’écrit pas** ce lien.
+
 ### Voix live → kb-perf
 
 - **Geste :** la voix en public est un état, pas seulement une piste.
@@ -75,14 +94,14 @@ Rien d’écrit, donc pas de lien :
 
 - Voix → Prod (pas de session nommée ici)
 - Voix → djay
-- djay → Ableton (deux outils ; un pont seulement si un même geste les a déjà enchaînés)
 - Cuisine, herboristerie (hors de cette carte, jusqu’à un geste réel)
-- kb-perf au-dessus de DJ / Ableton / Prod
+- kb-perf au-dessus de kb-dj / Ableton / Prod
+- Découper le losange en ponts séparés djay → Ableton « au cas où »
 
 ## Comment tester
 
 1. Prendre un geste musical réel de cette semaine.
 2. Ouvrir la règle. Le lien a-t-il déjà servi ?
-3. Si oui : une ligne `De → vers` + geste + `tenu`.
+3. Si c’est un mashup qui a touché kb-dj, djay, prod et Ableton : c’est le losange, pas quatre lignes nouvelles.
 4. Si le geste demandait un flow : ajouter `→ kb-perf`, sans changer la fonction de kb-perf.
 5. Si non : ne rien écrire.

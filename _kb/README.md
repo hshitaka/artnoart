@@ -6,7 +6,7 @@ Pile :
 bo-ia        →  bureau (agents, routing) — pas ici
   kb-liens   →  les relations déjà servies
     kb-perf  →  corps + psy → flow (tout domaine)
-    DJ, djay, Ableton, voix, prod, mix, …
+    kb-dj, djay, mashup, prod, Ableton, voix, mix, …
 ```
 
 1. Lire [_kb/liens/REGLE.md](liens/REGLE.md)

@@ -18,6 +18,8 @@ Trois champs, rien d’autre :
 2. **Geste** — ce qui s’est déjà passé, en une phrase.
 3. **Statut** — `tenu` ou rien. S’il n’est pas tenu, le lien n’est pas écrit.
 
+Un **losange** (ou une autre figure) est encore un seul geste, avec plusieurs coins. On ne le découpe pas en « on pourrait » de proche en proche. Si le geste n’a pas tenu les quatre coins, ce n’est pas un losange.
+
 ## Quand tu hésites
 
 N’écris pas le lien.
