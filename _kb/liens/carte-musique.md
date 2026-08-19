@@ -66,6 +66,8 @@ Les côtés ne s’écrivent pas à part. Ils tiennent parce que le mashup les a
 
 Un mashup n’est pas un set. Un set peut *contenir* un mashup. Ce n’est pas le même geste.
 
+djay est coincé entre ce losange et la ligne du set. Cause : [_kb/liens/CAUSE-djay.md](CAUSE-djay.md). Pas de nouveau dessin tant que la place n’est pas tranchée.
+
 ---
 
 ## 2. Set DJ (tenu)

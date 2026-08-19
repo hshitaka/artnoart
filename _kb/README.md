@@ -36,6 +36,8 @@ bo-ia        →  bureau (pas ici)
 
 djay et MaxMSP sont des outils **de** la musique. Ableton n’est pas rangé avec eux : c’est un coin du losange, donc un métier musical.
 
+djay est planté dans la carte (deux emplois, un seul siège). Cause : [_kb/liens/CAUSE-djay.md](liens/CAUSE-djay.md).
+
 ## Ailleurs
 
 | KB | Fonction |
