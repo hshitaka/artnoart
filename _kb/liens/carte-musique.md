@@ -33,13 +33,13 @@ Le losange est le cœur déjà nommé. Autour : les autres gestes musicaux. kb-p
 | djay | Mix DJ, mashup live | Pas Ableton |
 | mashup | Geste qui croise live et studio | Pas un outil, pas un hub |
 | [Prod](../prod/FONCTION.md) | Pièces, sessions, extraits | Pas le mix d’écoute |
-| Ableton | Session, clips, Push, pièce | Pas djay |
+| [Ableton](../ableton/FONCTION.md) | Session, clips, Push, mashup studio | Pas djay |
 | [Voix](../voix/FONCTION.md) | Prise, présence, traitement | Pas « la perf » |
 | [Mix](../mix/FONCTION.md) | Bus, balance, extraits de set | Pas la prod |
 | [Outils live](../outils/FONCTION.md) | MaxMSP, looper, code scène | Pas un hub artistique |
 | Set DJ | Geste de jouer un set | Pas le losange mashup |
 
-[kb-perf](../perf/FONCTION.md) n’est **pas** un nœud musical. Les outils : [_kb/outils/FONCTION.md](../outils/FONCTION.md).
+[kb-perf](../perf/FONCTION.md) n’est **pas** un nœud musical. Ableton est **dans** la musique : [_kb/ableton/FONCTION.md](../ableton/FONCTION.md). djay / MaxMSP : [_kb/outils/FONCTION.md](../outils/FONCTION.md).
 
 ---
 
@@ -59,7 +59,7 @@ Un geste, quatre coins. Le mashup est le croisement.
 
 - **kb-dj** — les sources qui entrent dans le mashup
 - **djay** — le mashup joué / trouvé en live
-- **Ableton** — le mashup construit / figé en session
+- [kb-ableton](../ableton/FONCTION.md) — le mashup construit / figé en session
 - **prod** — le mashup devenu pièce
 
 Les côtés ne s’écrivent pas à part. Ils tiennent parce que le mashup les a déjà tenus.

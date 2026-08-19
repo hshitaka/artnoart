@@ -6,8 +6,8 @@ Pile :
 bo-ia        →  bureau (pas ici)
   kb-liens   →  relations déjà servies
     kb-perf  →  corps + psy → flow (tout domaine)
-    métiers  →  dj, prod, mix, voix, pedago, …
-    outils   →  djay, Ableton, MaxMSP (pas des KB)
+    musique  →  dj, djay, mashup, ableton, prod, mix, voix
+    pedago   →  une porte depuis Ableton
 ```
 
 ## Règle
@@ -23,16 +23,24 @@ bo-ia        →  bureau (pas ici)
 | Cuisine | fermée — pas de geste nommé |
 | Herboristerie | fermée — pas de geste nommé |
 
-## Métiers
+## Musique
 
 | KB | Fonction |
 | --- | --- |
-| [kb-perf](perf/FONCTION.md) | corps + psy → flow |
 | [kb-dj](dj/FONCTION.md) | canon, sets |
-| [kb-prod](prod/FONCTION.md) | pièces, sessions |
+| [kb-ableton](ableton/FONCTION.md) | session, clips, Push, mashup studio |
+| [kb-prod](prod/FONCTION.md) | pièces, sessions rangées |
 | [kb-mix](mix/FONCTION.md) | écoute, balance |
 | [kb-voix](voix/FONCTION.md) | voix comme matière |
+| [outils live](outils/FONCTION.md) | djay, MaxMSP, looper |
+
+djay et MaxMSP sont des outils **de** la musique. Ableton n’est pas rangé avec eux : c’est un coin du losange, donc un métier musical.
+
+## Ailleurs
+
+| KB | Fonction |
+| --- | --- |
+| [kb-perf](perf/FONCTION.md) | corps + psy → flow (tout domaine) |
 | [kb-pedago](pedago/FONCTION.md) | transmission |
-| [outils](outils/FONCTION.md) | djay, Ableton, MaxMSP — pas des KB |
 
 Ce dossier n’est pas le site public.
