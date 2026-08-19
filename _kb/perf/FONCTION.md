@@ -13,7 +13,7 @@ Il relie le corps et la psy. Pas les dossiers. Pas les outils. Pas les recettes.
 
 - Pas le hub.
 - Pas « la musique live ».
-- Pas un sous-dossier de DJ, d’Ableton, ou de la prod.
+- Pas un sous-dossier de DJ, d’Ableton, ou de la prod. Ableton est dans la musique ; kb-perf, non.
 
 Un set DJ *utilise* kb-perf. Un service culinaire *utilise* kb-perf. Même KB, deux matières.
 
