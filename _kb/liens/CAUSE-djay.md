@@ -1,44 +1,39 @@
-# Cause — djay planté
+# Cause — djay plante au bout d’un moment
 
-djay n’a pas planté comme logiciel. Il est coincé dans la carte.
+C’est un **bug logiciel d’Algoriddim djay**, pas un problème de carte kb-liens.
 
 ## La cause
 
-**djay a deux emplois réels, et on l’a forcé à n’en choisir qu’un.**
+Pendant le set, djay écrit sans arrêt dans sa bibliothèque (analyse, cues, Neural Mix / mashup). **iCloud (CloudKit) essaie de synchroniser ça en live.**
 
-1. Sur la ligne du set, c’est l’outil : `kb-dj → djay → set`.
-2. Sur le mashup, c’est le lieu live : le mashup se joue / se trouve là, comme il se construit dans Ableton.
+Au bout de 2 à 4 heures, la sync sature le processeur. L’app devient lente, puis plante — ou la musique s’arrête.
 
-Un losange n’a que **quatre coins**. Cinq noms ont été donnés : kb-dj, djay, mashup, prod, Ableton.
+Le fichier en cause : `djay Media Library.djayMediaLibrary` (souvent `~/Music/djay/`). Il gonfle. CloudKit n’arrive plus à suivre.
 
-## Comment ça s’est coincé
-
-Le premier dessin tenait les deux emplois. Mashup au centre (le geste). Quatre coins : kb-dj, djay, prod, Ableton.
-
-```
-        kb-dj                 prod
-           \                 /
-              mashup
-            /               \
-        djay               Ableton
-```
-
-Ensuite Ableton a été sorti du tiroir « outils » — juste. L’agent a collé djay avec MaxMSP : « juste un outil ». Trop loin. djay n’est pas MaxMSP. Le mashup live passe par lui.
-
-Puis : *refaire le losange, ajouter kb-prod, kb-ableton, mashup, kb-dj.* Quatre noms. Mashup devient un coin. Plus de siège pour djay. L’agent a commencé à l’éjecter, en hésitant. Il a planté au milieu. Rien n’a été commité. La carte d’aujourd’hui a encore djay en coin.
+Algoriddim l’a reconnu : ralentissement lié à la sync iCloud, CPU qui monte au-dessus de 120 % après quelques heures, crash après 2–3 h de set. Même geste que le tien : mashup live dans djay, longtemps.
 
 ## Ce que ce n’est pas
 
-- Pas un crash d’Algoriddim djay Pro.
-- Pas le piège refresh S136 / `import_djay_data.py` (autre chantier, BPM/Key).
-- Pas MaxMSP. Pas Ableton.
+- Pas un mauvais dessin du losange.
+- Pas le piège refresh S136 (`import_djay_data.py`) — ça, c’est a2dd qui lit djay, un autre chantier.
+- Neural Mix / mashup aggrave la RAM, mais ce n’est pas l’horloge qui tue l’app. L’horloge, c’est iCloud qui sync la bibliothèque pendant que tu joues.
 
-## Décision en attente
+## Pour verrouiller (chez toi)
 
-Je ne redessine pas le losange. Deux lectures tiennent, ce n’est pas à deviner.
+1. djay ouvert → Réglages Mac : iCloud est-il coché pour djay ?
+2. Taille du fichier `djay Media Library.djayMediaLibrary` — s’il fait des centaines de Mo ou des Go, c’est ça.
+3. Au moment du ralenti, CPU de djay dans Moniteur d’activité : s’il grimpe et reste haut, c’est ça.
 
-**A — mashup au centre** (carte actuelle). djay reste un coin, face à Ableton : live / studio.
+Sans ton rapport de crash, on reconnaît le bug au **temps** : ça tient, puis ça tombe. Pas à un clic précis.
 
-**B — mashup en coin.** Quatre coins : kb-dj, mashup, kb-ableton, kb-prod. djay redescend sur la ligne du set, satellite du mashup live.
+## Contre (officiel Algoriddim, hors set)
 
-Le geste réel n’a pas changé. Seule la place de djay est en suspens.
+Quitter djay. Copier le fichier bibliothèque ailleurs (sauvegarde). Puis seulement, dans Terminal :
+
+```bash
+defaults write com.algoriddim.djay-iphone-free CMCResetCloudKitState -bool true
+```
+
+Ensuite rouvrir djay. Ne pas le faire en live. Ne pas supprimer la bibliothèque : tu perds cues et playlists.
+
+Le vrai filet pour un set long : iCloud **éteint pour djay** le temps du live. La sync, c’est après.
