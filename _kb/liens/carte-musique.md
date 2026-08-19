@@ -3,7 +3,7 @@
 Le champ musical entier, pas seulement le losange. Cuisine, herbe : pas ici. Pédagogie : seulement là où un geste musical y a déjà touché.
 
 Règle : [_kb/liens/REGLE.md](REGLE.md).
-Perf : [_kb/perf/FONCTION.md](../perf/FONCTION.md).
+Index : [_kb/README.md](../README.md).
 
 ## Vue d’ensemble
 
@@ -29,17 +29,17 @@ Le losange est le cœur déjà nommé. Autour : les autres gestes musicaux. kb-p
 
 | Nœud | Rôle | Pas ça |
 | --- | --- | --- |
-| kb-dj | Canon, sets, pratique DJ | Pas l’état de flow |
+| [kb-dj](../dj/FONCTION.md) | Canon, sets, pratique DJ | Pas l’état de flow |
 | djay | Mix DJ, mashup live | Pas Ableton |
 | mashup | Geste qui croise live et studio | Pas un outil, pas un hub |
-| Prod | Pièces, sessions, extraits | Pas le mix d’écoute |
+| [Prod](../prod/FONCTION.md) | Pièces, sessions, extraits | Pas le mix d’écoute |
 | Ableton | Session, clips, Push, pièce | Pas djay |
-| Voix | Prise, présence, traitement | Pas « la perf » |
-| Mix | Bus, balance, extraits de set | Pas la prod |
-| Outils live | MaxMSP, looper, code scène | Pas un hub artistique |
+| [Voix](../voix/FONCTION.md) | Prise, présence, traitement | Pas « la perf » |
+| [Mix](../mix/FONCTION.md) | Bus, balance, extraits de set | Pas la prod |
+| [Outils live](../outils/FONCTION.md) | MaxMSP, looper, code scène | Pas un hub artistique |
 | Set DJ | Geste de jouer un set | Pas le losange mashup |
 
-kb-perf n’est **pas** un nœud musical.
+[kb-perf](../perf/FONCTION.md) n’est **pas** un nœud musical. Les outils : [_kb/outils/FONCTION.md](../outils/FONCTION.md).
 
 ---
 
@@ -137,7 +137,7 @@ Déjà tenu **dans** le losange quand le geste est un mashup. Hors mashup, Ablet
 
 - **Geste :** ateliers déjà animés autour d’Ableton Live, Push et MaxMSP.
 - **Statut :** tenu
-- La pedago n’a pas encore sa carte. Le lien existe : le geste a eu lieu.
+- Porte : [_kb/pedago/FONCTION.md](../pedago/FONCTION.md). Pas de carte complète. Le lien existe : le geste a eu lieu.
 
 ---
 
