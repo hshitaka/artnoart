@@ -89,6 +89,60 @@ class DjayFiletTests(unittest.TestCase):
         self.assertEqual(code, 1)
         self.assertFalse((empty / "Music" / "djay-backups").exists())
 
+    def test_avant_set_writes_etat_and_apres_closes_cycle(self) -> None:
+        opens: list[str] = []
+        now = datetime(2026, 8, 19, 23, 30, tzinfo=timezone.utc)
+        code = filet.cmd_avant_set(
+            self.home,
+            running=False,
+            run_defaults=lambda argv: None,
+            is_darwin=True,
+            maintenant=now,
+            open_settings=lambda: opens.append("icloud"),
+        )
+        self.assertEqual(code, 0)
+        self.assertEqual(opens, ["icloud"])
+        etat = filet.read_etat(self.home)
+        self.assertIsNotNone(etat)
+        self.assertEqual(etat["etat"], "avant")
+        self.assertIn("20260819-233000", etat["copie"])
+        self.assertEqual(filet.cmd_pendant(self.home), 0)
+        self.assertEqual(
+            filet.cmd_apres_set(self.home, is_darwin=True, open_settings=lambda: opens.append("after")),
+            0,
+        )
+        etat = filet.read_etat(self.home)
+        self.assertEqual(etat["etat"], "apres")
+        self.assertTrue(Path(etat["copie"]).exists())
+        self.assertEqual(opens, ["icloud", "after"])
+
+    def test_pendant_without_avant_set_fails(self) -> None:
+        self.assertEqual(filet.cmd_pendant(self.home), 1)
+
+    def test_cli_status_and_cycle(self) -> None:
+        self.assertEqual(filet.main(["status", "--home", str(self.home)]), 0)
+        self.assertEqual(filet.main(["avant-set", "--home", str(self.home)]), 0)
+        self.assertEqual(filet.main(["pendant", "--home", str(self.home)]), 0)
+        self.assertEqual(filet.main(["apres-set", "--home", str(self.home)]), 0)
+        self.assertEqual(filet.read_etat(self.home)["etat"], "apres")
+
+    def test_wrapper_stays_in_repo_and_does_not_delete(self) -> None:
+        wrapper = ROOT / "_kb" / "outils" / "filet-set.sh"
+        text = wrapper.read_text(encoding="utf-8")
+        self.assertIn("djay_filet.py", text)
+        self.assertNotIn("rm ", text)
+        self.assertNotIn("os.remove", text)
+
+    def test_docs_point_to_the_full_cycle(self) -> None:
+        filet_set = (ROOT / "_kb" / "outils" / "FILET-SET.md").read_text(encoding="utf-8")
+        carte = (ROOT / "_kb" / "liens" / "carte-musique.md").read_text(encoding="utf-8")
+        kb_dj = (ROOT / "_kb" / "dj" / "FONCTION.md").read_text(encoding="utf-8")
+        self.assertIn("avant-set", filet_set)
+        self.assertIn("pendant", filet_set)
+        self.assertIn("apres-set", filet_set)
+        self.assertIn("FILET-SET.md", carte)
+        self.assertIn("FILET-SET.md", kb_dj)
+
     def test_source_has_no_delete_calls(self) -> None:
         source = MODULE_PATH.read_text(encoding="utf-8")
         self.assertNotIn("os.remove", source)

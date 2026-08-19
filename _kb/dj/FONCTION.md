@@ -6,6 +6,7 @@ kb-dj répond à : **quel canon, quel set, quelle pratique DJ.**
 
 - Les sources, le rangement, les sets.
 - Un coin du losange mashup, et le départ du set : `kb-dj → djay → set`.
+- Un set long passe par le filet : iCloud off pendant, sync après. [_kb/outils/FILET-SET.md](../outils/FILET-SET.md).
 
 ## Ce qu’il n’est pas
 

@@ -26,13 +26,12 @@ Algoriddim l’a reconnu : ralentissement lié à la sync iCloud, CPU qui monte 
 
 Sans ton rapport de crash, on reconnaît le bug au **temps** : ça tient, puis ça tombe. Pas à un clic précis.
 
-## Contre (officiel Algoriddim, hors set)
+## Contre
 
-Ferme djay, puis le filet (copie + reset, rien n’est supprimé) :
+Geste complet : [_kb/outils/FILET-SET.md](../outils/FILET-SET.md).
 
 ```bash
-cd "/chemin/vers/artnoart"
-python3 "_kb/outils/djay_filet.py" avant-set
+bash "_kb/outils/filet-set.sh" avant-set
 ```
 
-Geste complet : [_kb/outils/FILET-SET.md](../outils/FILET-SET.md). iCloud **OFF** pendant le live. La sync, c’est après. Ne pas vider la bibliothèque : tu perds cues et playlists.
+iCloud **OFF** pendant le live. La sync, c’est après. Ne pas vider la bibliothèque : tu perds cues et playlists.

@@ -12,6 +12,6 @@ Le mashup n’est pas un outil. C’est le geste du losange.
 
 Crash djay au bout d’un moment : [_kb/liens/CAUSE-djay.md](../liens/CAUSE-djay.md).
 
-Filet set (iCloud OFF pendant le live) : [_kb/outils/FILET-SET.md](FILET-SET.md).
+Filet set (iCloud OFF pendant le live) : [_kb/outils/FILET-SET.md](FILET-SET.md) — `filet-set.sh`.
 
 Carte : [_kb/liens/carte-musique.md](../liens/carte-musique.md).
