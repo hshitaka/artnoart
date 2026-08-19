@@ -28,12 +28,11 @@ Sans ton rapport de crash, on reconnaît le bug au **temps** : ça tient, puis �
 
 ## Contre (officiel Algoriddim, hors set)
 
-Quitter djay. Copier le fichier bibliothèque ailleurs (sauvegarde). Puis seulement, dans Terminal :
+Ferme djay, puis le filet (copie + reset, rien n’est supprimé) :
 
 ```bash
-defaults write com.algoriddim.djay-iphone-free CMCResetCloudKitState -bool true
+cd "/chemin/vers/artnoart"
+python3 "_kb/outils/djay_filet.py" avant-set
 ```
 
-Ensuite rouvrir djay. Ne pas le faire en live. Ne pas supprimer la bibliothèque : tu perds cues et playlists.
-
-Le vrai filet pour un set long : iCloud **éteint pour djay** le temps du live. La sync, c’est après.
+Geste complet : [_kb/outils/FILET-SET.md](../outils/FILET-SET.md). iCloud **OFF** pendant le live. La sync, c’est après. Ne pas vider la bibliothèque : tu perds cues et playlists.

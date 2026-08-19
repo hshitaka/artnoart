@@ -36,7 +36,7 @@ bo-ia        →  bureau (pas ici)
 
 djay et MaxMSP sont des outils **de** la musique. Ableton n’est pas rangé avec eux : c’est un coin du losange, donc un métier musical.
 
-Crash djay au bout d’un moment : [_kb/liens/CAUSE-djay.md](liens/CAUSE-djay.md) — sync iCloud de la bibliothèque pendant le set.
+Crash djay au bout d’un moment : [_kb/liens/CAUSE-djay.md](liens/CAUSE-djay.md). Filet set : [_kb/outils/FILET-SET.md](outils/FILET-SET.md).
 
 ## Ailleurs
 
