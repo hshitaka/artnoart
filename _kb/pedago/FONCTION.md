@@ -1,13 +1,20 @@
-# Fonction de kb-pedago
+# Fiche — kb-pedago
 
-kb-pedago répond à : **ce qui se transmet, et comment.**
+**Question :** ce qui se transmet, et comment.
+**Rang :** kb · transmission
+**Carte :** une porte (pas une carte complète)
 
-## Ce qu’il est
+## C’est
 
 - Cours, ateliers, transmission.
 - Pas un sous-dossier de la musique.
 
-## Lien tenu
+## C’est pas
+
+- Pas kb-ableton (la session).
+- Pas kb-perf (l’état du transmetteur / du groupe). Un cours *utilise* kb-perf.
+
+## Déjà servi
 
 Ableton → pedago : ateliers déjà animés (Ableton Live, Push, MaxMSP).
 
@@ -17,4 +24,6 @@ Le geste est musical. La pedago, elle, n’est pas de la musique. Même règle q
 
 Pas de carte pedago complète. Un seul lien, parce qu’un seul geste est nommé.
 
-Carte musique : [_kb/liens/carte-musique.md](../liens/carte-musique.md).
+## Voir
+
+Carte musique : [_kb/liens/carte-musique.md](../liens/carte-musique.md). Village : [_kb/village/README.md](../village/README.md).

@@ -78,6 +78,7 @@ kb-dj  →  djay  →  set  →  kb-perf
 
 - **Geste :** le set se joue dans djay, avec le canon de kb-dj.
 - **Statut :** tenu
+- **Filet :** iCloud éteint pour djay pendant le set, sync après. [_kb/outils/FILET-SET.md](../outils/FILET-SET.md)
 - **Pas le losange :** Ableton et prod ne sont pas requis. S’il y a mashup dans le set, le losange s’ajoute, il ne remplace pas le set.
 
 ---

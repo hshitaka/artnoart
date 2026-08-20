@@ -1,16 +1,26 @@
-# Fonction de kb-prod
+# Fiche — kb-prod
 
-kb-prod répond à : **quelle pièce, quelle session, quel extrait.**
+**Question :** quelle pièce, quelle session, quel extrait.
+**Rang :** kb · musique
 
-## Ce qu’il est
+## C’est
 
 - Les pièces de l’atelier, y compris un mashup figé.
 - Un coin du losange mashup (Ableton → prod).
+- Ce que le site artnoart *montre* (extraits), pas ce qu’a2dd *livre*.
 
-## Ce qu’il n’est pas
+## C’est pas
 
 - Pas le mix d’écoute.
-- Pas [kb-ableton](../ableton/FONCTION.md) (la session en train de se faire). Le mashup passe par Ableton, puis devient une pièce ici.
+- Pas [kb-ableton](../ableton/FONCTION.md) (la session en train de se faire).
 - Pas kb-perf.
+- Pas [dd-a2dd](../village/dd-a2dd.md).
 
-Carte : [_kb/liens/carte-musique.md](../liens/carte-musique.md).
+## Déjà servi
+
+- Extraits prod publiés sur artnoart, à côté des extraits mix.
+- Mashup devenu pièce (coin du losange).
+
+## Voir
+
+Carte : [_kb/liens/carte-musique.md](../liens/carte-musique.md). Site : [_kb/village/dd-artnoart.md](../village/dd-artnoart.md).
