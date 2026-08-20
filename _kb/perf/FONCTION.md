@@ -1,24 +1,30 @@
-# Fonction de kb-perf
+# Fiche — kb-perf
 
-kb-perf répond à une seule question : **dans quel état je suis, et comment je tiens le flux.**
+**Question :** dans quel état je suis, et comment je tiens le flux.
+**Rang :** kb · état · partout (pas un nœud musical)
 
 Il relie le corps et la psy. Pas les dossiers. Pas les outils. Pas les recettes.
 
-## Ce qu’il est
+## C’est
 
 - L’entrée dans le flow, le maintien, la chute, la récupération.
 - Valable partout : musique, cuisine, pédagogie, herboristerie, scène.
 
-## Ce qu’il n’est pas
+## C’est pas
 
-- Pas le hub.
+- Pas le hub. Pas kb-liens.
 - Pas « la musique live ».
-- Pas un sous-dossier de DJ, d’Ableton, ou de la prod. Ableton est dans la musique ; kb-perf, non.
+- Pas un sous-dossier de DJ, d’Ableton, ou de la prod.
+- Pas un dd.
 
-Un set DJ *utilise* kb-perf. Un service culinaire *utilise* kb-perf. Même KB, deux matières.
+Un set DJ *utilise* kb-perf. Un service culinaire *utiliserait* kb-perf. Même KB, deux matières.
 
-## Test (partie musicale)
+## Déjà servi (musique)
 
-Quand le geste est un set, un mashup live, une voix live, une scène, une session Ableton tenue en public : ouvrir kb-perf pour l’état.
+Set DJ, mashup live (djay), voix live, scène / outil live → kb-perf.
 
-Quand le geste est ranger un sample, nommer un stem, choisir un fichier djay : ne pas ouvrir kb-perf. Ça reste dans le KB métier.
+Ranger un sample, nommer un stem, choisir un fichier djay : **pas** kb-perf.
+
+## Voir
+
+Carte musique : [_kb/liens/carte-musique.md](../liens/carte-musique.md). Village : [_kb/village/README.md](../village/README.md).

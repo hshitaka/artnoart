@@ -38,6 +38,8 @@ djay et MaxMSP sont des outils **de** la musique. Ableton n’est pas rangé ave
 
 Crash djay au bout d’un moment : [_kb/liens/CAUSE-djay.md](liens/CAUSE-djay.md). Filet set : [_kb/outils/FILET-SET.md](outils/FILET-SET.md).
 
+Village (kb + dd) : [_kb/village/README.md](village/README.md).
+
 ## Ailleurs
 
 | KB | Fonction |

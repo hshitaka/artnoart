@@ -1,17 +1,26 @@
-# Fonction de kb-dj
+# Fiche — kb-dj
 
-kb-dj répond à : **quel canon, quel set, quelle pratique DJ.**
+**Question :** quel canon, quel set, quelle pratique DJ.
+**Rang :** kb · musique
 
-## Ce qu’il est
+## C’est
 
 - Les sources, le rangement, les sets.
-- Un coin du losange mashup, et le départ du set : `kb-dj → djay → set`.
-- Un set long passe par le filet : iCloud off pendant, sync après. [_kb/outils/FILET-SET.md](../outils/FILET-SET.md).
+- Un coin du losange mashup.
+- Le départ du set : `kb-dj → djay → set`.
 
-## Ce qu’il n’est pas
+## C’est pas
 
 - Pas djay (l’outil).
 - Pas le mashup (le geste).
 - Pas kb-perf (l’état).
+- Pas [dd-a2dd](../village/dd-a2dd.md) (la livraison des titres).
 
-Carte : [_kb/liens/carte-musique.md](../liens/carte-musique.md).
+## Déjà servi
+
+- Set dans djay, avec [filet iCloud](../outils/FILET-SET.md).
+- Sources qui entrent dans le losange mashup.
+
+## Voir
+
+Carte : [_kb/liens/carte-musique.md](../liens/carte-musique.md). Village : [_kb/village/README.md](../village/README.md).

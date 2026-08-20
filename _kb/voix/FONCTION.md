@@ -1,16 +1,26 @@
-# Fonction de kb-voix
+# Fiche — kb-voix
 
-kb-voix répond à : **la voix comme matière** — prise, présence, traitement.
+**Question :** la voix comme matière — prise, présence, traitement.
+**Rang :** kb · musique · satellite
 
-## Ce qu’il est
+## C’est
 
 - Un satellite de la partie musicale.
 - En public : `voix live → kb-perf`.
 
-## Ce qu’il n’est pas
+## C’est pas
 
 - Pas « la perf ».
 - Pas un cinquième coin du losange.
-- Pas encore de lien tenu vers prod, djay, ou mashup.
 
-Carte : [_kb/liens/carte-musique.md](../liens/carte-musique.md).
+## Déjà servi
+
+- Voix live → kb-perf (tenu pour le public).
+
+## Pas encore
+
+Pas de lien tenu vers prod, djay, ou mashup. Aucune session nommée ici.
+
+## Voir
+
+Carte : [_kb/liens/carte-musique.md](../liens/carte-musique.md). Village : [_kb/village/README.md](../village/README.md).
