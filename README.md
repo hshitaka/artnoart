@@ -25,11 +25,12 @@ Le catalogue machine est dans `assets/downloads/catalog.json`.
 ## Tests
 
 ```bash
-python3 tests/test_downloads.py
+python3 -m unittest discover -s tests -p 'test_*.py' -v
 ```
 
-Vérifie le catalogue, les codes HTTP, l’identité binaire disque/réseau, et le câblage HTML des deux voies.
+Vérifie le catalogue, les voies HTTP, le câblage HTML Direct/Fetch, et les corrections d’optimisation (polices, cache, lecteur unique).
 
 ## Audit
 
-Le rapport (constats d’origine, corrections, UI) est dans [`AUDIT.md`](AUDIT.md).
+Le rapport d’origine (constats, UI, DWET) est dans [`AUDIT.md`](AUDIT.md).  
+L’audit **optimisation du code** est dans [`_hub/audits/AUDIT-CODE-OPTIM-2026-08-20.md`](_hub/audits/AUDIT-CODE-OPTIM-2026-08-20.md).
