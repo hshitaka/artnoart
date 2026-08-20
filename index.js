@@ -7,7 +7,9 @@
   const sections = [...document.querySelectorAll("main section[id]")];
   const navLinks = [...document.querySelectorAll(".site-nav a[href^='#']")];
   let statusTimer = 0;
-  let activeAudio = null;
+  const player = new Audio();
+  player.preload = "auto";
+  player.playsInline = true;
   let activeTrack = null;
 
   function announce(message, isError = false) {
@@ -33,7 +35,7 @@
     catalogUrl: "assets/downloads/catalog.json",
 
     async loadCatalog() {
-      const response = await fetch(this.catalogUrl, { cache: "no-store" });
+      const response = await fetch(this.catalogUrl);
       if (!response.ok) {
         throw new Error(`Catalogue indisponible (${response.status})`);
       }
@@ -54,7 +56,7 @@
 
     async fetchBlob(url, filename) {
       const name = filename || filenameFromUrl(url);
-      const response = await fetch(url, { cache: "no-store" });
+      const response = await fetch(url);
       if (!response.ok) {
         throw new Error(`Échec fetch ${response.status} — ${url}`);
       }
@@ -127,19 +129,13 @@
   sections.forEach((section) => observer.observe(section));
 
   function stopPlayback() {
-    const audio = activeAudio;
     const track = activeTrack;
-    activeAudio = null;
     activeTrack = null;
-    if (audio) {
-      audio.onerror = null;
-      audio.onended = null;
-      audio.pause();
-      try {
-        audio.currentTime = 0;
-      } catch {
-        /* ignore unseekable buffers */
-      }
+    player.pause();
+    try {
+      player.currentTime = 0;
+    } catch {
+      /* ignore unseekable buffers */
     }
     track?.classList.remove("is-playing");
     const playingButton = track?.querySelector(".play");
@@ -149,38 +145,45 @@
     }
   }
 
+  function expectedPlayerUrl() {
+    const src = activeTrack?.dataset.src;
+    if (!src) return "";
+    return new URL(src, document.baseURI).href;
+  }
+
+  player.addEventListener("ended", () => {
+    if (activeTrack) stopPlayback();
+  });
+  player.addEventListener("error", () => {
+    const expected = expectedPlayerUrl();
+    if (!expected) return;
+    if (player.currentSrc && player.currentSrc !== expected) return;
+    stopPlayback();
+    announce("Lecture impossible pour cet extrait.", true);
+  });
+
   document.querySelectorAll(".track .play").forEach((button) => {
     button.addEventListener("click", async () => {
       const track = button.closest(".track");
       const src = track?.dataset.src;
       if (!src) return;
 
-      if (activeTrack === track && activeAudio && !activeAudio.paused) {
+      if (activeTrack === track && !player.paused) {
         stopPlayback();
         return;
       }
 
       stopPlayback();
-      const audio = new Audio();
       const url = new URL(src, document.baseURI).href;
-      audio.preload = "auto";
-      audio.src = url;
-      activeAudio = audio;
+      const generation = track;
+      player.src = url;
       activeTrack = track;
       track.classList.add("is-playing");
       button.setAttribute("aria-label", (button.getAttribute("aria-label") || "Lire").replace(/^Lire/, "Pause"));
-      audio.addEventListener("ended", () => {
-        if (activeAudio === audio) stopPlayback();
-      }, { once: true });
-      audio.addEventListener("error", () => {
-        if (activeAudio !== audio) return;
-        stopPlayback();
-        announce("Lecture impossible pour cet extrait.", true);
-      }, { once: true });
       try {
-        await audio.play();
+        await player.play();
       } catch (error) {
-        if (activeAudio !== audio) return;
+        if (activeTrack !== generation) return;
         stopPlayback();
         const blocked = error instanceof DOMException && error.name === "NotAllowedError";
         announce(

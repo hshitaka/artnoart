@@ -302,6 +302,7 @@ a {
   background: var(--bg-2);
   border: 1px solid var(--line);
   border-radius: var(--radius);
+  contain: layout style;
 }
 
 .track.is-playing {
