@@ -1,13 +1,14 @@
 # Fiche — dd-jukbike
 
-**Question :** comment une requête du public arrive dans les mains du DJ.
+**Question :** le public demande un morceau ; comment ça arrive jusqu’au set.
 **Rang :** dd · village
 **Où :** `hshitaka/jukbike-app`
 
 ## C’est
 
-- Le dashboard live : queue, votes, joués.
-- Geste tenu avec djay : copier « Artiste - Titre », chercher dans djay (⌘F), charger, mixer, marquer joué.
+- L’écran du DJ pendant la soirée : la liste des demandes, les votes, ce qui a déjà été joué.
+- Ça ne joue pas la musique. **djay** joue. Jukbike montre *quoi* chercher.
+- Le geste : tu copies le nom (artiste + titre), tu le colles dans la recherche de djay, tu charges, tu mixes, tu marques « joué ».
 
 ## C’est pas
 
@@ -17,7 +18,7 @@
 
 ## Déjà servi
 
-- Page DJ du repo : workflow djay Pro nommé et câblé (copie, raccourcis).
+- L’écran DJ de jukbike : copie du titre vers djay, déjà décrit dans l’app.
 
 ## Voir
 

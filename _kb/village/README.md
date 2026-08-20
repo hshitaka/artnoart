@@ -42,7 +42,7 @@ bo-ia          →  bureau (qui parle à qui)
 | --- | --- | --- |
 | [dd-a2dd](dd-a2dd.md) | livrer les titres (download → formatage → scoring) | machine, pas ce repo |
 | [dd-artnoart](dd-artnoart.md) | publier l’atelier (écoute, téléchargement) | ce repo |
-| [dd-jukbike](dd-jukbike.md) | requêtes live → djay | GitHub jukbike-app |
+| [dd-jukbike](dd-jukbike.md) | le public demande un titre, le DJ le joue dans djay | GitHub jukbike-app |
 | [dd-genre-formater](dd-genre-formater.md) | normaliser les genres | GitHub genre-formater |
 
 ## Comment lire une fiche
